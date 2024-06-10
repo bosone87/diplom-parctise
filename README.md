@@ -903,7 +903,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
 </p>
 
 [Grafana](http://app.bosone:3000)
-
+admin/prom-operator
 
 **Тестовое приложение**
 Подготовим Helm Chart тестового приложения - [Test-app](cicd/netology-app/deploy/)<br>
