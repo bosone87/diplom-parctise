@@ -902,7 +902,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
     <img width="1200 height="600" src="/img/web_grafana4.png">
 </p>
 
-[Grafana](http://app.bosone:3000)
+[Grafana](http://app.bosone:3000)<br>
 admin/prom-operator
 
 **Тестовое приложение**
