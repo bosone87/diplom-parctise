@@ -274,7 +274,7 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 
 **Создадим инфраструктуру под Kubernetes-кластер**
 
-[**infra**](terraform/)
+[**terraform**](terraform/)
 
 [ig.tf](terraform/ig.tf)
 [nlb.tf](terraform/nlb.tf)
@@ -917,7 +917,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
     <img width="1200 height="600" src="/img/app_web.png">
 </p>
 
-[app](http://app.bosone.ru)
+[Test-app](http://app.bosone.ru)
 
 ---
 ### Установка и настройка CI/CD
@@ -966,7 +966,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
     <img width="1200 height="600" src="/img/gitlab_pipeline.png">
 </p>
 
-Стадия сборки приложения - [build stage](https://gitlab.com/bos.one/netology-app/-/jobs/7053435606)
+Стадия сборки приложения - [build stage](https://gitlab.com/bos.one/netology-app/-/jobs/7053435606)<br>
 Стадия деплоя - [deploy stage](https://gitlab.com/bos.one/netology-app/-/jobs/7053445299)
 
 Новая версия приложения в кластере
@@ -974,7 +974,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
     <img width="1200 height="600" src="/img/app_new_tag.png">
 </p>
 
-Новая версиия веб приложения - [http:/app.bosone.ru](http:/app.bosone.ru)
+Новая версиия веб приложения - [http:/app.bosone.ru](http://app.bosone.ru)
 <p align="center">
     <img width="1200 height="600" src="/img/app_new_web.png">
 </p>
