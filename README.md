@@ -938,8 +938,8 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.
 
 **CI/CD**
-Настроим pipeline в Gitlab:
 
+Настроим pipeline в Gitlab.
 Установим Gitlab-agent в кластер:
 
 [helm_gl_agent.sh](cicd/helm_gl_agent.sh)
