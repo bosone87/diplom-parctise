@@ -1,0 +1,54 @@
+[all]
+%{ for ip in masters ~}
+master-${index(masters, ip) + 1} ansible_host=${ip[1]} ip=${ip[0]} etcd_member_name=etcd-${index(masters, ip) + 1}
+%{ endfor ~}
+%{ for ip in workers ~}
+worker-${index(workers, ip) + 1} ansible_host=${ip[1]} ip=${ip[0]}
+%{ endfor ~}
+%{ for ip in ingress ~}
+ingress-${index(ingress, ip) + 1} ansible_host=${ip[1]} ip=${ip[0]}
+%{ endfor ~}
+
+[kube_control_plane]
+%{ for ip in masters ~}
+master-${index(masters, ip) + 1}
+%{ endfor ~}
+
+[etcd]
+%{ for ip in masters ~}
+master-${index(masters, ip) + 1}
+%{ endfor ~}
+
+[kube_node]
+%{ for ip in workers ~}
+worker-${index(workers, ip) + 1}
+%{ endfor ~}
+%{ for ip in ingress ~}
+ingress-${index(ingress, ip) + 1}
+%{ endfor ~}
+
+[kube_worker]
+%{ for ip in workers ~}
+worker-${index(workers, ip) + 1}
+%{ endfor ~}
+
+[kube_ingress]
+%{ for ip in ingress ~}
+ingress-${index(ingress, ip) + 1}
+%{ endfor ~}
+
+[calico_rr]
+
+[k8s_cluster:children]
+kube_control_plane
+kube_node
+calico_rr
+
+
+[all:vars]
+supplementary_addresses_in_ssl_keys='[%{ for ip in masters ~} "${ip[1]}",%{ endfor ~}]'
+ansible_connection=ssh
+ansible_user=root
+ansible_ssh_private_key_file=/root/.ssh/id_ed25519
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_common_args='-o StrictHostKeyChecking=accept-new'
