@@ -1,0 +1,13 @@
+replicaCount: 2
+application:
+  name: test-app
+  containerPort: 80
+  namespace: default
+image:
+  repository: bosone/test-app
+  tag: latest
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30001
+  targetPort: 80
