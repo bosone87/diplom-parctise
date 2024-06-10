@@ -906,7 +906,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
 
 
 **Тестовое приложение**
-Подготовим Helm Chart тестового приложения - [app](cicd/netology-app/deploy/)
+Подготовим Helm Chart тестового приложения - [Test-app](cicd/netology-app/deploy/)<br>
 Установим в кластер.
 
 <p align="center">
@@ -974,7 +974,7 @@ pip3 install -r kubespray/requirements.txt --break-system-packages<br>
     <img width="1200 height="600" src="/img/app_new_tag.png">
 </p>
 
-Новая версиия веб приложения - [http:/app.bosone.ru](http://app.bosone.ru)
+Новая версиия веб приложения - [http://app.bosone.ru](http://app.bosone.ru)
 <p align="center">
     <img width="1200 height="600" src="/img/app_new_web.png">
 </p>
